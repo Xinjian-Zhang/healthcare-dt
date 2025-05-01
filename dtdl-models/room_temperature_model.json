@@ -1,0 +1,29 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:hospital:healthcare:room:temperature;1",
+    "@type": "Interface",
+    "displayName": "Room Temperature Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Temperature",
+            "schema": "double",
+            "description": "Temperature of the room",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "RoomTemperatureSensorId",
+            "schema": "string",
+            "description": "Unique ID of the room temperature sensor",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "Status",
+            "schema": "string",
+            "description": "Current status of the room temperature sensor (e.g., Normal, Too High, Too Low, Inactive)",
+            "writable": true
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:hospital:healthcare:patient;1",
+    "@type": "Interface",
+    "displayName": "Patient Interface Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "PatientId",
+            "schema": "string",
+            "description": "Unique ID of the patient",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "Name",
+            "schema": "string",
+            "description": "Name of the patient",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Gender",
+            "schema": "string",
+            "description": "Gender of the patient",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Age",
+            "schema": "integer",
+            "description": "Age of the patient",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Diagnosis",
+            "schema": "string",
+            "description": "Diagnosis or medical condition of the patient",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Status",
+            "schema": "string",
+            "description": "Current health status of the patient (e.g., Healthy, Critical, Monitoring)",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "assignedToRoom",
+            "target": "dtmi:hospital:healthcare:room;1",
+            "description": "Relationship linking patient to a room"
+        },
+        {
+            "@type": "Relationship",
+            "name": "hasBodyTemperature",
+            "target": "dtmi:hospital:healthcare:patient:body_temperature;1",
+            "description": "Relationship linking patient to their body temperature data"
+        },
+        {
+            "@type": "Relationship",
+            "name": "hasHeartRate",
+            "target": "dtmi:hospital:healthcare:patient:heart_rate;1",
+            "description": "Relationship linking patient to their heart rate data"
+        },
+        {
+            "@type": "Relationship",
+            "name": "hasSpO2",
+            "target": "dtmi:hospital:healthcare:patient:spo2;1",
+            "description": "Relationship linking patient to their SpO₂ level data"
+        }
+    ]
+}

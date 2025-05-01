@@ -1,0 +1,29 @@
+{
+    "@id": "dtmi:hospital:healthcare:patient:body_temperature;1",
+    "@context": "dtmi:dtdl:context;2",
+    "@type": "Interface",
+    "displayName": "Body Temperature Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Temperature",
+            "schema": "double",
+            "description": "Patient's body temperature",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "BodyTemperatureSensorId",
+            "schema": "string",
+            "description": "Unique ID of the body temperature sensor",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "Status",
+            "schema": "string",
+            "description": "Current status of the body temperature sensor (e.g., Normal, Too High, Too Low, Inactive)",
+            "writable": true
+        }
+    ]
+}
