@@ -1,0 +1,6 @@
+azure-digitaltwins-core
+azure-identity
+pyserial
+web3
+cryptography
+dotenv
