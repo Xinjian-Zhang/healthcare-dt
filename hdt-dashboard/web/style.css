@@ -1,0 +1,235 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+/* ---------- Login Page Styles ---------- */
+.login-container {
+    width: 320px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #4b79a1;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #3a688a;
+}
+
+.error-message {
+    color: #d9534f;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ---------- Dashboard Page Styles ---------- */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4b79a1, #8ab0d2);
+    padding: 15px;
+    position: relative;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.welcome-user {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.alert-box {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(248, 215, 218, 0.9);
+    color: #721c24;
+    border: 1px solid rgba(245, 198, 203, 0.9);
+    padding: 6px 12px;
+    border-radius: 6px;
+    animation: glowAlert 1s ease-in-out infinite alternate;
+}
+
+.alert-box img.icon-alert {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+@keyframes glowAlert {
+    0% { box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.4); }
+    100% { box-shadow: 0 0 15px 4px rgba(255, 0, 0, 0.8); }
+}
+
+/* Layout */
+.content {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card Styles */
+.info-card, .sensor-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.info-card:hover, .sensor-card:hover {
+    transform: scale(1.02);
+}
+
+.info-card h2, .sensor-card h3 {
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.card-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* AI Card */
+#ai-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#ai-card button {
+    width: 200px; /* fixed width */
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#ai-card button:hover {
+    background: linear-gradient(45deg, #feb47b, #ff7e5f);
+}
+
+/* Spinner for loading animation */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* AI Suggestion Container */
+#ai-suggestion-container {
+    width: 100%;
+    border: 2px solid #007bff;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    animation: marquee 2s linear infinite;
+    margin-top: 10px;
+}
+
+@keyframes marquee {
+    0% { border-color: #007bff; }
+    25% { border-color: #d5f05f; }
+    50% { border-color: #d2a1f7; }
+    75% { border-color: #ff7e5f; }
+    100% { border-color: #007bff; }
+}
+
+/* Alert State for abnormal status cards */
+.alert-state {
+    background-color: rgba(255, 0, 0, 0.1);
+    animation: flickerCard 1s infinite alternate;
+}
+
+@keyframes flickerCard {
+    0% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.4); }
+    100% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); }
+}

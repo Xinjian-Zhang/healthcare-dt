@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Patient Room HDT Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Smart Patient Room HDT Dashboard</h1>
+        <!-- Welcome message -->
+        <div class="welcome-user" id="welcome-user"></div>
+        <div class="alert-box" id="global-alert" style="display: none;">
+            <img src="images/alert_icon.png" alt="alert" class="icon-alert"/>
+            <span>Alert !!!</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Left Column -->
+        <div class="left-column">
+            <div class="info-card" id="time-card">
+                <h2>Current Time</h2>
+                <p id="current-time"></p>
+                <hr>
+                <p>Last Updated: <span id="last-updated"></span></p>
+            </div>
+
+            <div class="info-card" id="patient-card">
+                <h2>Patient Information</h2>
+                <div class="card-row">
+                    <img src="images/patient_icon.png" alt="patient" class="icon"/>
+                    <div class="card-column">
+                        <p><strong>Name:</strong> <span id="patient-name"></span></p>
+                        <p><strong>Age:</strong> <span id="patient-age"></span></p>
+                        <p><strong>Gender:</strong> <span id="patient-gender"></span></p>
+                        <p><strong>Diagnosis:</strong> <span id="patient-diagnosis"></span></p>
+                        <p><strong>ID:</strong> <span id="patient-id"></span></p>
+                    </div>
+                </div>
+                <p><strong>Status:</strong> <span id="patient-status"></span></p>
+            </div>
+
+            <div class="sensor-card" id="sensor-bodytemp-card">
+                <img src="images/body_temp_icon.png" alt="Body Temp" class="icon"/>
+                <div>
+                    <h3>BodyTempSensor1</h3>
+                    <p>Value: <span id="sensor-bodytemp-value"></span></p>
+                    <p>Sensor ID: <span id="sensor-bodytemp-id"></span></p>
+                    <p>Status: <span id="sensor-bodytemp-status"></span></p>
+                </div>
+            </div>
+
+            <div class="sensor-card" id="sensor-heartrate-card">
+                <img src="images/heart_rate_icon.png" alt="Heart Rate" class="icon"/>
+                <div>
+                    <h3>HeartRateSensor1</h3>
+                    <p>Value: <span id="sensor-heartrate-value"></span></p>
+                    <p>Sensor ID: <span id="sensor-heartrate-id"></span></p>
+                    <p>Status: <span id="sensor-heartrate-status"></span></p>
+                </div>
+            </div>
+
+            <div class="sensor-card" id="sensor-spo2-card">
+                <img src="images/spo2_icon.png" alt="SpO2" class="icon"/>
+                <div>
+                    <h3>SpO2Sensor1</h3>
+                    <p>Value: <span id="sensor-spo2-value"></span></p>
+                    <p>Sensor ID: <span id="sensor-spo2-id"></span></p>
+                    <p>Status: <span id="sensor-spo2-status"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <div class="info-card" id="room-card">
+                <h2>Room Information</h2>
+                <div class="card-row">
+                    <img src="images/room_icon.png" alt="Room" class="icon"/>
+                    <div class="card-column">
+                        <p><strong>Room Number:</strong> <span id="room-number"></span></p>
+                        <p><strong>Room Type:</strong> <span id="room-type"></span></p>
+                        <p><strong>ID:</strong> <span id="room-id"></span></p>
+                    </div>
+                </div>
+                <p><strong>Status:</strong> <span id="room-status"></span></p>
+            </div>
+
+            <div class="sensor-card" id="sensor-roomtemp-card">
+                <img src="images/room_temp_icon.png" alt="Room Temp" class="icon"/>
+                <div>
+                    <h3>RoomTempSensor1</h3>
+                    <p>Value: <span id="sensor-roomtemp-value"></span></p>
+                    <p>Sensor ID: <span id="sensor-roomtemp-id"></span></p>
+                    <p>Status: <span id="sensor-roomtemp-status"></span></p>
+                </div>
+            </div>
+
+            <div class="sensor-card" id="sensor-roomhumidity-card">
+                <img src="images/room_humidity_icon.png" alt="Room Humidity" class="icon"/>
+                <div>
+                    <h3>RoomHumiditySensor1</h3>
+                    <p>Value: <span id="sensor-roomhumidity-value"></span></p>
+                    <p>Sensor ID: <span id="sensor-roomhumidity-id"></span></p>
+                    <p>Status: <span id="sensor-roomhumidity-status"></span></p>
+                </div>
+            </div>
+
+            <div class="info-card" id="ai-card">
+                <img src="images/ai_icon.png" alt="AI Functions" class="icon"/>
+                <h2>AI Suggestions</h2>
+                <button id="ai-btn" onclick="fetchAISuggestion()">✨ Get AI Suggestions</button>
+                <div id="ai-suggestion-container">
+                    <p id="ai-suggestion-text">AI Suggestions will be displayed here.😊</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/eel.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+eel
+azure-digitaltwins-core
+azure-identity
+python-dotenv
+openai
