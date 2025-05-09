@@ -1,0 +1,29 @@
+{
+    "@id": "dtmi:hospital:healthcare:patient:spo2;1",
+    "@context": "dtmi:dtdl:context;2",
+    "@type": "Interface",
+    "displayName": "SpO₂ Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "SpO2",
+            "schema": "double",
+            "description": "SpO₂ level of the patient",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "SpO2SensorId",
+            "schema": "string",
+            "description": "Unique ID of the SpO₂ sensor",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "Status",
+            "schema": "string",
+            "description": "Current status of the SpO₂ sensor (e.g., Normal, Too High, Too Low, Inactive)",
+            "writable": true
+        }
+    ]
+}

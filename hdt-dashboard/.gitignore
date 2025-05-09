@@ -1,0 +1,39 @@
+# Python __pycache__ and temporary files
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.swp
+*.DS_Store
+
+# environment variables and secrets
+.env
+
+# Python virtual environments
+venv/
+env/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# eel build files
+dist/
+build/
+*.spec
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Local Credentials Config
+users.json

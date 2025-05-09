@@ -1,0 +1,29 @@
+{
+    "@id": "dtmi:hospital:healthcare:room:humidity;1",
+    "@context": "dtmi:dtdl:context;2",
+    "@type": "Interface",
+    "displayName": "Room Humidity Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Humidity",
+            "schema": "double",
+            "description": "Humidity level of the room",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "RoomHumiditySensorId",
+            "schema": "string",
+            "description": "Unique ID of the room humidity sensor",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "Status",
+            "schema": "string",
+            "description": "Current status of the room humidity sensor (e.g., Normal, Too High, Too Low, Inactive)",
+            "writable": true
+        }
+    ]
+}

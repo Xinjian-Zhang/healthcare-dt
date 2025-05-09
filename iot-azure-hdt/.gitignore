@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.env
+*.env.*
+.env
+.envrc
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+dist/
+build/
+*.log
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+*.iml
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Data & Encryption Files
+data/
+*.enc
+blockchain_tx_map.json

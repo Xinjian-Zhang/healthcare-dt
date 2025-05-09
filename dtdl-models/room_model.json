@@ -1,0 +1,48 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:hospital:healthcare:room;1",
+    "@type": "Interface",
+    "displayName": "Room Interface Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "RoomId",
+            "schema": "string",
+            "description": "Unique ID of the room",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "RoomNumber",
+            "schema": "string",
+            "description": "Room number within the hospital",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "RoomType",
+            "schema": "string",
+            "description": "Type of the room (e.g., ICU, general ward)",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "Status",
+            "schema": "string",
+            "description": "Current status of the room (e.g., Normal, Alarm, Maintenance)",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "name": "hasTemperatureSensor",
+            "target": "dtmi:hospital:healthcare:room:temperature;1",
+            "description": "Relationship linking room to its temperature sensor"
+        },
+        {
+            "@type": "Relationship",
+            "name": "hasHumiditySensor",
+            "target": "dtmi:hospital:healthcare:room:humidity;1",
+            "description": "Relationship linking room to its humidity sensor"
+        }
+    ]
+}

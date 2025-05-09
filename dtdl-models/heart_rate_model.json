@@ -1,0 +1,29 @@
+{
+    "@id": "dtmi:hospital:healthcare:patient:heart_rate;1",
+    "@context": "dtmi:dtdl:context;2",
+    "@type": "Interface",
+    "displayName": "Heart Rate Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "HeartRate",
+            "schema": "double",
+            "description": "Heart rate of the patient",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "HeartRateSensorId",
+            "schema": "string",
+            "description": "Unique ID of the heart rate sensor",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "Status",
+            "schema": "string",
+            "description": "Current status of the heart rate sensor (e.g., Normal, Too High, Too Low, Inactive)",
+            "writable": true
+        }
+    ]
+}
