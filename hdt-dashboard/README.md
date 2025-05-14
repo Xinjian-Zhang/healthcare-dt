@@ -74,7 +74,7 @@ All sensitive information in `.env` must be excluded from version control.
 
 ## About
 
-This code is as a part of a Master's thesis project.
+> This code is as a part of a Master's thesis project.
 
 - Author: Xinjian Zhang
 - [Github Link](https://github.com/Xinjian-Zhang)

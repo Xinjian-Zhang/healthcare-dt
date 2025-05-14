@@ -1,8 +1,4 @@
-
-
-
-          
-# Medical IoT Digital Twin System
+# Blockchain-Enabled Healthcare Digital Twins System
 
 This repository contains a comprehensive implementation of a `Blockchain-Enabled Digital Twins in Healthcare`, some critical codes are collectively stored here.
 
@@ -55,8 +51,12 @@ This repository contains a comprehensive implementation of a `Blockchain-Enabled
 - Xinjian Zhang
 - [GitHub Profile](https://github.com/Xinjian-Zhang)
 
+**Acknowledgements**
+
+Special thanks to the guidance and support from my supervisor, Dr. Mubashar Iqbal.
+
 ---
 
-> Note: This implementation serves as a prototupe of `Blckchain-Enabled Digital Twins in Healthcare` for a Master's thesis project.
+> Note: This implementation serves as a prototype of `Blckchain-Enabled Digital Twins in Healthcare` for a Master's thesis project.
 
         

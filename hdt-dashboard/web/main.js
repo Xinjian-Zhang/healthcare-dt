@@ -108,8 +108,8 @@ function updateTime() {
     document.getElementById("current-time").textContent = formattedTime;
 }
 
-// 每秒更新一次时间
+// update per second
 setInterval(updateTime, 1000);
 
-// 初始加载时更新一次时间
+// Initial load, update time once
 updateTime();

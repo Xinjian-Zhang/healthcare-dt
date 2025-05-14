@@ -13,4 +13,4 @@ foreach ($file in $files) {
 
 Read-Host "Press Enter to exit"
 
-# Written by Xinjian Zhang
+# Author: Xinjian Zhang
